@@ -1,0 +1,70 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> {{titulo}} | Professional Skills</title>
+    <link rel="stylesheet" href="{% static 'css/estilos.css'%}">
+</head>
+
+<body>
+    <header>
+
+        <nav class="navegador">
+            <a href="{% url 'Inicio'%}"><img id="logo_cabecera" src={%static 'images/logo.png'%} alt=""></a>
+            <ul>
+                <li><a href="{% url 'Inicio'%}" >Inicio</a></li>
+                <li><a href= "{% url 'Inicio'%}">Eventos</a></li>
+                <li><a href="{% url 'Inicio'%}">Contactanos</a></li>
+                <li><a href="{% url 'Inicio'%}">Sobre Nosotros</a></li>
+            </ul>
+        </nav>
+    
+    </header>
+    <div class="contenedor">
+
+        <section class="menu_izquierdo">
+            <ul class=" lista_menu">
+                
+                {%for categoria in categorias%}
+                <img class="img_menu" src="{{categoria.imagen.url}}"/>
+                <li>
+                    {{categoria.nombre}}
+                    <ul class="menu_interno">
+
+                        {%for servi in servi_menu%}
+                        {%if servi.0 == categoria.id%}
+                            <li>{{servi.1}}</li>
+                            {%endif%}
+                        {%endfor%}
+                    </ul>
+                </li> 
+                    {%endfor%}
+                <img class="img_menu" src="{% static 'images/albums.jpeg'%}"/> 
+                <li>
+                    <a class="fix_m" href="{%url 'Todos'%}">Albums</a>
+                    <ul class="menu_interno">
+                        <a href="{%url 'Albums' %}"><li>Todos</li></a>
+                        {%for album in albums%}
+                        <a href="{%url 'Fotos' album.id %}"><li>{{album.categoria}}</li></a>
+                        {%endfor%}
+                    </ul>
+            </ul>
+        </section>
+
+        <section class="contenido_central">
+            {%block titulo%}
+            {%endblock%}
+            
+            {%block contenido%}
+            {%endblock%}
+
+        </section>
+    </div>
+    <footer>
+        Professional Skills &copy; | Rammer Gomez. {% now "DATE_FORMAT" %}
+    </footer>
+</body>
+</html>

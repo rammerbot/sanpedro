@@ -1,0 +1,29 @@
+{%extends 'layouts/index.html'%}
+
+
+{%block contenido%}
+        <div class="buscador_div">       
+                <form method="GET">
+                        <input type="text" class="buscador_input" placeholder="Nombre..." name="buscar">
+                        <input type="submit" class="btn" value="Buscar Mascota">
+                </form>
+        </div> 
+
+        {%for album in albumes%}
+                <div class="album_categoria">
+                        <a href="{%url 'Fotos' album.id%}"><h1 class="album_titulo">{{album.categoria}}</h1></a>
+                        {%for foto in fotografias%}
+                        <span class="datos_album">
+                                        {%if foto.categoria_id == album.id%}
+                                                <h3 ><a class="nombre_mascota" href="{%url 'Mascota' foto.id%}">{{foto.mascota}}</a></h3>
+                                                <img class ="img_album" src="{{foto.foto.url}}">
+                                                <p class="galeria_contenido">{{foto.descripcion|safe}}</p>
+                                                <p class="fecha_album">{{foto.fecha_at}}</p>
+                                        {% endif %}
+                        </span>
+                        {%endfor%}
+                        <hr class="fixed">
+                </div>
+        {%endfor%}
+       
+{%endblock%}

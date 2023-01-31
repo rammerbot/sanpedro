@@ -1,0 +1,14 @@
+{%extends 'layouts/index.html'%}
+
+{%block contenido%}
+        <div class="bloque_mascota">
+                {%for foto in pictures%} 
+                        <span class="datos_album">
+                                <h3 class="nombre_mascota">{{foto.mascota}}</h3>
+                                <img class ="img_mascota" src="{{foto.foto.url}}">
+                                <p class="galeria_contenido">{{foto.descripcion|safe}}</p>
+                                <p class="fecha_album">{{foto.fecha_at}}</p>
+                        </span>
+                {%endfor%}
+        </div>
+{%endblock%}

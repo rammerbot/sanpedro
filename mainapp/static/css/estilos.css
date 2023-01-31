@@ -1,0 +1,283 @@
+*{
+    
+    font-family: sans-serif, Arial, Helvetica;
+    text-decoration: none;
+}
+body{
+    background-color: #F2F2F2;
+    background-image: url(fondo.png);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+header{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+#logo_cabecera {
+
+    height: 100px;
+    padding-left: 40px;
+}
+
+.navegador{
+    width: 100%;
+    height: 100px;
+    background-color: rgb(41, 38, 38);
+    padding: 0px;
+    border-radius: 3px;
+    box-shadow:0px 0px 22px black;
+    overflow: hidden;
+}
+
+.navegador ul{
+    float: right;
+    margin-top: 7px;
+    margin-right: 30px;
+    margin-top: 45px;
+}
+
+.navegador ul li{
+
+    list-style: none;
+    float: left;
+    transition: 0.5s;
+    padding: 13px;
+}
+
+.navegador ul li a{
+    color: white;
+    font-size: 18px;
+}
+
+.navegador ul li:hover{
+    background-color: rgb(70, 67, 67);
+    font-size: 20px;
+    transition: 0.7s;
+    border-radius: 5px;
+}
+
+.contenedor{
+    display: inline;
+    padding-top: 100px;
+    display: flex;
+    justify-content:space-between;
+}
+
+.menu_izquierdo{
+    height: auto;
+    width: 15%;
+    background-color: rgba(250, 176, 65, 0.767);
+    box-shadow: 0px 0px 22px black;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.lista_menu{
+    font-size: 20px;
+    list-style: none;
+    padding-left: 0;    
+}
+
+.img_menu {
+    height: 80px;
+    margin-top: 50px;
+    box-shadow: 0px 5px 10px;
+    border-radius: 55px;
+}
+.lista_menu li{
+    color: rgb(233, 233, 233);
+    margin: 22px 0px;
+    font-weight:bold;
+    border-radius: 20px;
+    
+    padding: 5px;
+    background-color: black;
+    text-align: center;
+}
+
+.lista_menu li a{
+    color: whitesmoke;
+}
+
+.menu_interno{
+    display: none;
+    list-style: none;
+    position: absolute;
+    transition: 0.5s;
+    padding: 5px;
+    text-align: center;    
+}
+
+.menu_interno li{
+    margin: 7px 0px 7px 100px;
+    padding-left: 5px;
+    border-radius: 3px;
+    background-color:black;
+    color: rgb(233, 233, 233);  
+}
+
+.lista_menu li:hover {
+    background-color: rgba(255, 166, 0, 0.474);
+    border-radius: 3px;
+    transition: 1s;
+    color: black;
+    font-size: 22px;
+}
+
+.lista_menu li:hover .menu_interno{
+    display: block;
+    transition: 1s;
+    text-align: left;
+    font-size: 18px;
+}
+
+.contenido_central{
+    height: auto;
+    width: 81%;
+    background-color: rgba(253 226 187 / 67%);
+    box-shadow: 0px 0px 22px black;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.bloque_album {
+
+    display:inline;
+    width: 96%;
+
+    
+}
+
+.album_categoria {
+
+    background-color: rgba(235, 189, 104, 0.864);
+    margin: 20px;
+    border-radius: 5px;
+    border: 1px solid white;
+    box-shadow: 0px 0px 8px rgb(51, 51, 51);
+
+}
+
+.datos_album {
+
+    display: block;
+    text-align: center;
+    font-size: 13px;
+    float: left;
+    font-weight: 10px;
+    height: 240px;
+    
+}
+
+.album_titulo {
+
+    display: block;
+    color: rgb(26, 26, 28);
+    text-shadow: 2px 2px 3px whitesmoke;
+    margin-left: 10px;
+    width: 90px;
+    text-align: center;
+}
+
+.album_titulo:hover{
+    background-color: grey;
+    color: black;
+    font-size: 22px;
+    border-radius: 3px;
+}
+.nombre_mascota{
+    
+    display: block;
+    color: rgb(6, 6, 23);
+    text-shadow: 0px 0px 3px whitesmoke;
+    margin-left: 10px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.nombre_mascota:hover{
+    background-color: grey;
+    color: black;
+    font-size: 22px;
+    border-radius: 3px;
+}
+
+.img_album{
+ 
+    height: 90px;
+    border-radius: 5px;
+    box-shadow: -2px -2px 3px whitesmoke;
+    margin: 10px;
+}
+
+.galeria_contenido {
+    display: block;
+}
+
+.fixed{
+    clear: both;
+    float: none;
+}
+
+.img_mascota{
+
+    height: 600px;
+    margin: 0 auto;
+    border-radius: 4px;
+}
+
+.bloque_mascota{
+
+    display: block;
+    margin-left: 10%;
+}
+
+.buscador_div{
+    padding-top: 15px;
+    padding-left: 20px;
+}
+
+.buscador_input{
+    
+    align-self:center;
+    box-shadow: 0px 0px 9px gray;
+    border: 1 solid gray;
+    border-radius: 5px;
+    
+}
+.btn{
+    
+    height: 25px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.btn:hover{
+    height: 36px;
+}
+
+.fecha_album {
+    font-size: 9px;
+    color: gray;
+    text-align: center;
+    padding-left: 15px;
+}
+
+footer{
+    background-color: rgb(41, 38, 38);
+    width: 100%;
+    height: 80px;
+    margin: 0px auto;
+    color: aliceblue;
+    border-radius: 5px;
+    box-shadow: 0px 0px 22px black;
+    margin-top: 6px;
+    text-align: center;
+}

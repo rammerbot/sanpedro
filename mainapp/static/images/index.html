@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rammer Gomez | Professional Skills</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <header>
+
+        <nav class="navegador">
+
+            <img id="logo_cabecera" src="images/logo.png" alt="">
+            <ul>
+                <li>Inicio</li>
+                <li>Eventos</li>
+                <li>Contactanos</li>
+                <li>Sobre Nosotros</li>
+            </ul>
+        </nav>
+    
+    </header>
+    <div class="contenedor">
+
+        <section class="menu_izquierdo">
+            <ul class=" lista_menu">
+                <img class="img_menu" src="images/servicios.png" alt="">
+                <li>
+                    Servicios
+                    <ul class="menu_interno">
+                        <li>Baños</li>
+                        <li>Cortes</li>
+                        <li>perfume</li>
+                        <li>peinados</li>
+                    </ul> 
+                </li>  
+                <img class="img_menu" src="images/album.png" alt="">             
+                <li>Album
+                    <ul class="menu_interno">
+                        <li>Cachorros</li>
+                        <li>Gatos</li>
+                        <li>Mas</li>
+                    </ul>
+                </li> 
+                    <img class="img_menu" src="images/medicina.png" alt="">               
+                <li>Medicina
+                    <ul class="menu_interno">
+                        <li>Vacunas</li>
+                        <li>Desparacitacion</li>
+                        <li>recetas</li>
+                        <li>consultas</li>
+                        <li>castracion</li>
+                    </ul>
+                </li>
+                <img class="img_menu" src="images/campaña.png" alt="">
+                <li>Campañas
+                    <ul class="menu_interno">
+                        <li>vacunas</li>
+                        <li>alimentacion</li>
+                        <li>baños</li>
+                        <li>castracion</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section class="contenido_central">
+            {%box content%}
+            
+            {%endbox%}
+        </section>
+    </div>
+    <footer>
+        Professional Skills &copy; | Rammer Gomez. {% now "DATE_FORMAT" %}
+    </footer>
+</body>
+</html>

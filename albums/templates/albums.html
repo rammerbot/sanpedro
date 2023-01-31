@@ -1,0 +1,17 @@
+{%extends 'layouts/index.html'%}
+
+
+{%block contenido%}
+        {%for servicio in servicios%}
+        {%block titulo%}
+                <h1>{{servicio.precio}}</h1>
+        {%endblock%}
+            <p> {{servicio.servicio | safe}}</p>
+            <p> {{servicio.descripcion|safe}}</p>
+            <p> {{servicio.precio|safe}}</p>
+            <img class="img_menu" src="{{servicio.imagen.url}}"/>
+
+            <hr>
+            
+        {%endfor%}
+{%endblock%}

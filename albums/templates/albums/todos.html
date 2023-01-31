@@ -1,0 +1,20 @@
+{%extends 'layouts/index.html'%}
+
+{%block contenido%}
+        <div class="bloque_album">
+                <div class="buscador_div">       
+                        <form method="GET">
+                                <input type="text" class="buscador_input" placeholder="mascota" name="buscar">
+                                <button type="submit" class="btn">
+                        </form>
+                </div>
+                {%for foto in pictures%} 
+                        <span class="datos_album">
+                                <h3 class="nombre_mascota"><a href="{%url 'Mascota' foto.id%}">{{foto.mascota}}</a></h3>
+                                <img class ="img_album" src="{{foto.foto.url}}">
+                                <p class="galeria_contenido">{{foto.descripcion|safe}}</p>
+                                <p class="fecha_album">{{foto.fecha_at}}</p>
+                        </span>
+                {%endfor%}
+        </div>
+{%endblock%}
